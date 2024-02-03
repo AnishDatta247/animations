@@ -26,6 +26,7 @@ export const ZoomParallax = ({ data, title, fontSize }: ZoomParallaxProps) => {
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [10, 0]);
 
   const pictures = [
     {
@@ -62,21 +63,20 @@ export const ZoomParallax = ({ data, title, fontSize }: ZoomParallaxProps) => {
     <div ref={container} className={styles.container}>
       <div className={styles.sticky}>
         {fontSize && (
-          <span className={`text-[22vw] ${styles.underlayText}`}>
-            {title}
-          </span>
+          <span className={`text-[22vw] ${styles.underlayText}`}>{title}</span>
         )}
         {fontSize && (
-          <span className={`text-[22vw] ${styles.overlayText}`}>
-            {title}
-          </span>
+          <span className={`text-[22vw] ${styles.overlayText}`}>{title}</span>
         )}
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div key={index} style={{ scale }} className={styles.el}>
-              <div className={styles.imageContainer}>
+              <motion.div
+                className={styles.imageContainer}
+                style={{ borderRadius, overflow: "hidden" }}
+              >
                 <Image src={src} fill alt="image" placeholder="blur" />
-              </div>
+              </motion.div>
             </motion.div>
           );
         })}
