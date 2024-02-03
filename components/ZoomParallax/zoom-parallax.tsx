@@ -62,12 +62,12 @@ export const ZoomParallax = ({ data, title, fontSize }: ZoomParallaxProps) => {
     <div ref={container} className={styles.container}>
       <div className={styles.sticky}>
         {fontSize && (
-          <span className={`text-\[${fontSize}\] ${styles.underlayText}`}>
+          <span className={`text-[22vw] ${styles.underlayText}`}>
             {title}
           </span>
         )}
         {fontSize && (
-          <span className={`text-\[${fontSize}\] ${styles.overlayText}`}>
+          <span className={`text-[22vw] ${styles.overlayText}`}>
             {title}
           </span>
         )}

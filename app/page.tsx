@@ -18,11 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <ZoomParallax
-        data={ZoomParallaxData}
-        title="United Kingdom"
-        fontSize="100px"
-      />
+      <ZoomParallax data={ZoomParallaxData} title="Kashmir" fontSize="100px" />
     </>
   );
 }

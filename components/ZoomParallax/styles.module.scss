@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Boska-Bold";
+  src: url("../../fonts/Boska-Bold.woff2") format("woff2"),
+    url("../../fonts/Boska-Bold.woff") format("woff"),
+    url("../../fonts/Boska-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
 .container {
   height: 300vh;
   position: relative;
@@ -18,12 +28,17 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      font-family: "Boska-Bold";
     }
 
     .overlayText {
       z-index: 1;
       color: transparent;
       -webkit-text-stroke: whitesmoke 1px;
+
+      @media screen and (min-width: 640px) {
+        -webkit-text-stroke: whitesmoke 2px;
+      }
     }
 
     .el {
