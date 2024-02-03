@@ -1,6 +1,6 @@
 "use client";
 
-import { ZoomParallax } from "@/components/ZoomParallaz/zoom-parallax";
+import { ZoomParallax } from "@/components/ZoomParallax/zoom-parallax";
 import { ZoomParallaxData } from "@/data/zoom-parallax";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
